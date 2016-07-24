@@ -1,0 +1,259 @@
+/*固定宽度的容器  手机没有宽度，默认100%*/
+/*手机的固定宽度*/
+*{
+	box-sizing:border-box;
+}
+.container{
+    width:100%;
+    display: block;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+}
+/*100% 宽度容器*/
+.container-fluid{
+	width:100%;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    display: block;
+}
+
+/*行*/
+.row{
+	margin-left: -15px!important;
+	margin-right: -15px!important;
+	/*抵消100%容器的padding的15px*/
+	display: block;
+	height:auto;
+}
+.row:after{
+	content: '';
+	display: block;
+	height: 0;
+	line-height: 0;
+	clear:both;
+}
+.row [class*=col-]{
+	display: block;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.row .col-xs-1{
+	width:8.333333%;
+}
+.row .col-xs-2{
+	width:16.666667%;
+}
+.row .col-xs-3{
+	width:25%;
+}
+.row .col-xs-4{
+	width:33.333333%;
+}
+.row .col-xs-5{
+	width:41.666667%;
+}
+.row .col-xs-6{
+	width:50%;
+}
+.row .col-xs-7{
+	width:58.333333%;
+}
+.row .col-xs-8{
+	width:66.666667%;
+}
+.row .col-xs-9{
+	width:75%;
+}
+.row .col-xs-10{
+	width:83.333333%;
+}
+.row .col-xs-11{
+	width:91.666667%;
+}
+.row .col-xs-12{
+	width:100%;
+}
+
+/*平板*/
+@media screen and (min-width: 768px){
+	.container{
+		width:738px;
+	}
+	.row .col-sm-1{
+	width:8.333333%;
+}
+.row .col-sm-2{
+	width:16.666667;
+}
+.row .col-sm-3{
+	width:25%;
+}
+.row .col-sm-4{
+	width:33.333333%;
+}
+.row .col-sm-5{
+	width:41.666667%;
+}
+.row .col-sm-6{
+	width:50%;
+}
+.row .col-sm-7{
+	width:58.333333%;
+}
+.row .col-sm-8{
+	width:66.666667%;
+}
+.row .col-sm-9{
+	width:75%;
+}
+.row .col-sm-10{
+	width:83.333333%;
+}
+.row .col-sm-11{
+	width:91.666667%;
+}
+.row .col-sm-12{
+	width:100%;
+}
+}
+
+/*PC*/
+@media screen and (min-width: 1024px){
+	.container{
+		width:970px;
+	}
+	.row .col-md-1{
+	width:8.333333%;
+}
+.row .col-md-2{
+	width:16.666667;
+}
+.row .col-md-3{
+	width:25%;
+}
+.row .col-md-4{
+	width:33.333333%;
+}
+.row .col-md-5{
+	width:41.666667%;
+}
+.row .col-md-6{
+	width:50%;
+}
+.row .col-md-7{
+	width:58.333333%;
+}
+.row .col-md-8{
+	width:66.666667%;
+}
+.row .col-md-9{
+	width:75%;
+}
+.row .col-md-10{
+	width:83.333333%;
+}
+.row .col-md-11{
+	width:91.666667%;
+}
+.row .col-md-12{
+	width:100%;
+}
+}
+
+
+/*平板*/
+@media screen and (min-width: 1200px){
+	.container{
+		width:1170px;
+	}
+	.row .col-lg-1{
+	width:8.333333%;
+}
+.row .col-lg-2{
+	width:16.666667;
+}
+.row .col-lg-3{
+	width:25%;
+}
+.row .col-lg-4{
+	width:33.333333%;
+}
+.row .col-lg-5{
+	width:41.666667%;
+}
+.row .col-lg-6{
+	width:50%;
+}
+.row .col-lg-7{
+	width:58.333333%;
+}
+.row .col-lg-8{
+	width:66.666667%;
+}
+.row .col-lg-9{
+	width:75%;
+}
+.row .col-lg-10{
+	width:83.333333%;
+}
+.row .col-lg-11{
+	width:91.666667%;
+}
+.row .col-lg-12{
+	width:100%;
+}
+.row .col-lg-13{
+	width:20%;
+}
+}
+
+/*让指定的列数在指定的屏幕上隐藏*/
+/* hidden-xs  手机隐藏
+hidden-sm  平板隐藏
+hidden-md   PC小屏隐藏
+hidden-lg   PC大屏隐藏 */
+
+
+@media screen and (max-width:768px){
+	.hidden-xs{
+		display: none!important;
+	}
+}
+@media screen and (min-width:768px) and (max-width: 1024px){
+	.hidden-sm{
+		display: none!important;
+	}
+}
+@media screen and (min-width:1024px) and (max-width: 1200px){
+	.hidden-md{
+		display: none!important;
+	}
+}
+@media screen and (min-width:1200px){
+	.hidden-lg{
+		display: none!important;
+	}
+}
+/*图片自适应*/
+.img-response{
+	max-width:100%;
+}
+/*居中*/
+.block-center{
+   margin-right: auto;
+   margin-left: auto;
+}
+.text-center{
+   margin-right: auto;
+   margin-left: auto;
+}
+.clf:after{
+	content:'';
+	line-height: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
